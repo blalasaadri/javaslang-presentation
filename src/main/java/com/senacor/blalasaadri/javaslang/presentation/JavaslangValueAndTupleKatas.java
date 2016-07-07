@@ -60,7 +60,7 @@ public class JavaslangValueAndTupleKatas {
      * @param enumeration an enum which should be wrapped in a tuple
      * @return a tuple containing the given parameters
      */
-    public Tuple8<Integer, String, LocalDate, Boolean, Throwable, Random, Field, Iterable<Enum<?>>> createATupleFromEightElements(Integer integer,
+    public Tuple8<Integer, String, LocalDate, Boolean, Throwable, Random, Field, Enum<?>> createATupleFromEightElements(Integer integer,
         String string, LocalDate localDate, Boolean bool, Throwable throwable, Random random, Field field, Enum<?> enumeration) {
         return null;
     }

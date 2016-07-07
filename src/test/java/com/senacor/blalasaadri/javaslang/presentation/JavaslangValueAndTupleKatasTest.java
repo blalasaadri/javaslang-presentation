@@ -25,15 +25,15 @@ public class JavaslangValueAndTupleKatasTest {
     private static final boolean BOOL = false;
     private static final Random RANDOM = new Random();
     private AreYouCrazyError throwable;
-
-    private JavaslangValueAndTupleKatas javaslangValueAndTupleKatas;
     private Field field;
+
+    public JavaslangValueAndTupleKatas javaslangValueAndTupleKatas;
 
     @Before
     public void setup() throws NoSuchFieldException {
         javaslangValueAndTupleKatas = new JavaslangValueAndTupleKatas();
         throwable = new AreYouCrazyError("That's nuts!");
-        field = JavaslangValueAndTupleKatasTest.class.getField("BOOL");
+        field = JavaslangValueAndTupleKatasTest.class.getField("javaslangValueAndTupleKatas");
     }
 
     @Test
@@ -62,7 +62,7 @@ public class JavaslangValueAndTupleKatasTest {
 
     @Test
     public void getTupleOfEight() {
-        Tuple8<Integer, String, LocalDate, Boolean, Throwable, Random, Field, Iterable<Enum<?>>> tuple = javaslangValueAndTupleKatas
+        Tuple8<Integer, String, LocalDate, Boolean, Throwable, Random, Field, Enum<?>> tuple = javaslangValueAndTupleKatas
             .createATupleFromEightElements(INTEGER, STRING, LOCAL_DATE, BOOL, throwable, RANDOM, field,
                 ReasonsWhyIThinkYoureCrazy.YOU_HAVE_LIKE_A_MILLION_CATS);
 
